@@ -1,11 +1,49 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Transporte Norte VTC</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logística Norte</title>
+    <link rel="stylesheet" href="empresa.css">
 </head>
 <body>
-  <h1>Bienvenido a Transporte Norte VTC</h1>
-  <p>Tu empresa virtual de transporte en ETS2.</p>
+    <nav>
+        <button onclick="mostrarSeccion('sobreNosotros')">Sobre Nosotros</button>
+        <button onclick="mostrarSeccion('nuestroEquipo')">Nuestro Equipo</button>
+        <a href="galeria.html"><button>Galería</button></a>
+        <button onclick="mostrarSeccion('contacto')">Contacto</button>
+    </nav>
+
+    <section id="sobreNosotros" class="contenido">
+        <h1>Sobre Nosotros</h1>
+        <p>Logística Norte abrió sus puertas el 25 de marzo del 2025... (tu texto)</p>
+        <img src="VERIFICARTE.png" width="80%" height="70%">
+    </section>
+
+    <section id="nuestroEquipo" class="contenido" style="display:none;">
+        <h1>Nuestro Equipo</h1>
+        <h2>Mauro (Owner)</h2>
+        <img src="Logo_LN_1.png" width="20%" height="20%">
+        <!-- Resto del equipo igual -->
+    </section>
+
+    <section id="contacto" class="contenido" style="display:none;">
+        <h1>Contacto</h1>
+        <ol>
+            <li>Instagram</li>
+            <li>YouTube</li>
+            <li>Trucksbook</li>
+            <li>Discord</li>
+            <li>TruckersMP</li>
+        </ol>
+    </section>
+
+    <script>
+        function mostrarSeccion(seccionId) {
+            const secciones = document.querySelectorAll('.contenido');
+            secciones.forEach(seccion => seccion.style.display = 'none');
+            document.getElementById(seccionId).style.display = 'block';
+        }
+    </script>
 </body>
 </html>
