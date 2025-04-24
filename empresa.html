@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistica Norte</title>
+    <link rel="stylesheet" href="empresa.css"> <!-- Opcional para diseño -->
+</head>
+<body>
+    <nav>
+        <button onclick="mostrarSeccion('sobreNosotros')">Sobre Nosotros</button>
+        <button onclick="mostrarSeccion('nuestroEquipo')">Nuestro Equipo</button>
+        <button onclick="mostrarSeccion('galeria')">Galería</button>
+        <button onclick="mostrarSeccion('contacto')">Contacto</button>
+    </nav>
+
+    <!-- Sección "Sobre Nosotros" -->
+    <section id="sobreNosotros" class="contenido">
+        <h1>Sobre Nosotros</h1>
+        <p>Logistica Norte abrio sus puertas para todo el mundo el 25 de Marzo Del 2025 con el fin de juntar jugadores para salir a hacer rutas entre todos e asistir a convoys Publicos, 
+            Multiempresas e Privados y compartir buenos momentos entre todos! Nuestro lema, "Sin Trabajo No Hay Resultado"<br> ¿que significa?, 
+            <br>
+            Bueno Significa que junto a nuestros conductores y tu que talvez te quieres unir! vamos a construir todo un camino junto lleno de Buena Vibra y Muchas Rutas!
+            Ofrecemos una variedad de convoyes en Euro Truck Simulator 2, con los cuales mantenemos un equilibrio entre las áreas de DLC's, mapa común y las diferentes zonas horarias
+             para que podamos proporcionar convoyes a todos los miembros.</p>
+        <img src="../VERIFICARTE.png" width="80%" height="70%">
+    </section>
+
+    <!-- Sección "Nuestro Equipo" -->
+    <section id="nuestroEquipo" class="contenido" style="display:none;">
+        <h1>Nuestro Equipo</h1>
+            
+        <h2>Mauro (Owner)</h2>
+            <img src="../Logo_LN_1.png" width="20%" height="20%">
+        <h2>Alejo (Ceo)</h2>
+            <img src="../Logo_LN_1.png" width="20%" height="20%">
+        <h2>Marco (Representante)</h2>
+            <img src="../Logo_LN_1.png" width="20%" height="20%">
+        <h2>Homero (Recursos Humanos)</h2>
+            <img src="../Logo_LN_1.png" width="20%" height="20%">
+        <h2>Josep (Event Manager)</h2>
+            <img src="../Logo_LN_1.png" width="20%" height="20%">
+    </section>
+
+
+        <a href="galeria.html"><button>Galería</button></a>
+    
+    
+
+    <!-- Sección "Contacto" -->
+    <section id="contacto" class="contenido" style="display:none;">
+        <h1>Contacto</h1>
+        <ol>
+            <li>Instagram</li>
+            <li>YouTube</li>
+            <li>Trucksbook</li>
+            <li>Discord</li>
+            <li>TruckersMP</li>
+        </ol>
+    </section>
+
+    <script>
+        function mostrarSeccion(seccionId) {
+            const secciones = document.querySelectorAll('.contenido');
+            secciones.forEach(seccion => seccion.style.display = 'none'); // Ocultar todas las secciones
+            document.getElementById(seccionId).style.display = 'block'; // Mostrar solo la sección seleccionada
+        }
+    </script>
+</body>
+</html>
